@@ -4,15 +4,15 @@
       "id": 1,
       "name": "Leanne Graham",
       "phone": "1-770-736-8031 x56442",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
-      "address": "Apt. 556"
+      "address": "Apt. 55685"
     },
     {
       "id": 2,
       "name": "Ervin Howell",
       "phone": "010-692-6593 x09125",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 879"
     },
@@ -20,7 +20,7 @@
       "id": 3,
       "name": "Clementine Bauch",
       "phone": "1-463-123-4447",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 847"
     },
@@ -28,7 +28,7 @@
       "id": 4,
       "name": "Patricia Lebsack",
       "phone": "493-170-9623 x156",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Apt. 692"
     },
@@ -36,7 +36,7 @@
       "id": 5,
       "name": "Chelsey Dietrich",
       "phone": "(254)954-1289",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 351"
     },
@@ -44,7 +44,7 @@
       "id": 6,
       "name": "Mrs. Dennis Schulist",
       "phone": "123-456-789",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Apt. 950"
     },
@@ -52,7 +52,7 @@
       "id": 7,
       "name": "Kurtis Weissnat",
       "phone": "123-456-789",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 280"
     },
@@ -60,7 +60,7 @@
       "id": 8,
       "name": "Nicholas Runolfsdottir V",
       "phone": "123-456-789",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 729"
     },
@@ -68,7 +68,7 @@
       "id": 9,
       "name": "Glenna Reichert",
       "phone": "123-456-789",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 449"
     },
@@ -76,9 +76,38 @@
       "id": 10,
       "name": "Clementina DuBuque",
       "phone": "123-456-789",
-      "birthDate": "23/11/1989",
+      "birthDate": "1989-11-23",
       "bloodGroup": "2",
       "address": "Suite 198"
+    },
+    {
+      "id": "53",
+      "name": "AsoASo",
+      "phone": "1236584",
+      "birthDate": "2002-01-23",
+      "bloodGroup": "2",
+      "address": "sahd ashdg"
+    }
+  ],
+
+  "visits": [
+    {
+      "id": 1,
+      "visitDate": "1989-11-23",
+      "department": "virahatakan",
+      "doctorName": "Petrosyan",
+      "sale": "20000",
+      "medication": "tempalgin",
+      "dischrgeDate": "2021-11-23"
+    },
+    {
+      "id": 2,
+      "visitDate": "1989-11-23",
+      "department": "virahatakan",
+      "doctorName": "Petrosyan",
+      "sale": "20000",
+      "medication": "tempalgin",
+      "dischrgeDate": "2021-11-23"
     }
   ]
 }

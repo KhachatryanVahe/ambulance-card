@@ -4,10 +4,11 @@ import {
     TextField,
     Datagrid,
     EditButton,
-    DeleteButton
+    DeleteButton,
+    CreateButton
 } from "react-admin";
 
-const UsersList = (props) => {
+const UserList = (props) => {
     return (
         <List {...props}>
             <Datagrid>
@@ -17,11 +18,12 @@ const UsersList = (props) => {
                 <TextField label="Ծնդյան օր" source="birthDate"/>
                 <TextField label="Արյան խումբ" source="bloodGroup"/>
                 <TextField label="Հասցե" source="address"/>
-                <EditButton label="Փոփոխել" source="/users"/>
+                <EditButton label="Փոփոխել" basePath="/users"/>
                 <DeleteButton label="Ջնջել" source="/users"/>
+                <CreateButton label="Այցելություն" source="/users/"/>
             </Datagrid>
         </List>
     )
 }
 
-export default UsersList;
+export default UserList;

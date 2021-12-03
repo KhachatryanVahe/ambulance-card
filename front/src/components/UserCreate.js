@@ -1,9 +1,9 @@
 import React from "react";
 import {Create, SimpleForm, TextInput, DateInput} from "react-admin"
 
-const UsersCreate = (props) => {
+const UserCreate = (props) => {
     return(
-        <Create title={"Create user"} {...props}>
+        <Create title={"Create a user"} {...props}>
             <SimpleForm>
                 <TextInput label="Անձնագիր" source="id"/>
                 <TextInput label="Անուն, Ազգանուն" source="name"/>
@@ -15,4 +15,4 @@ const UsersCreate = (props) => {
         </Create>
     )
 }
-export default UsersCreate;
+export default UserCreate;
