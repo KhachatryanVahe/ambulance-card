@@ -3,7 +3,7 @@ import {Create, SimpleForm, TextInput, DateInput} from "react-admin"
 
 const UserCreate = (props) => {
     return(
-        <Create title={"Create a user"} {...props}>
+        <Create title={"Ավելացնել հիվանդ"} {...props}>
             <SimpleForm>
                 <TextInput label="Անձնագիր" source="id"/>
                 <TextInput label="Անուն, Ազգանուն" source="name"/>

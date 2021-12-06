@@ -5,12 +5,21 @@ import {
     Datagrid,
     EditButton,
     DeleteButton,
-    CreateButton
+    CreateButton,
+    TextInput
 } from "react-admin";
+import ListActions from "../Action";
 
 const UserList = (props) => {
+    const postFilters = [
+        <TextInput label="Անձնագիր"  source="id" alwaysOn />,
+        <TextInput label="Անուն, ազգանուն" source="name" alwaysOn/>,
+    ];
     return (
-        <List {...props}>
+        <List {...props}  
+            // actions={<ListActions/>}
+            filters={postFilters}
+        >
             <Datagrid>
                 <TextField label="Անձնագիր" source="id"/>
                 <TextField label="Անուն, Ազգանուն" source="name"/>
@@ -20,7 +29,7 @@ const UserList = (props) => {
                 <TextField label="Հասցե" source="address"/>
                 <EditButton label="Փոփոխել" basePath="/users"/>
                 <DeleteButton label="Ջնջել" source="/users"/>
-                <CreateButton label="Այցելություն" source="/users/"/>
+                <CreateButton label="Այցելություն" basePath="/visits"/>
             </Datagrid>
         </List>
     )

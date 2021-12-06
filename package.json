@@ -7,11 +7,12 @@
     "start": "mkdir static/uploads & nodemon server",
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix front",
-    "dev" : "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "Vahe Khachatryan",
   "dependencies": {
+    "@mui/icons-material": "^5.2.1",
     "concurrently": "^6.4.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
