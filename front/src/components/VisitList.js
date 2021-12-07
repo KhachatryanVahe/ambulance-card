@@ -6,11 +6,19 @@ import {
     Datagrid,
     EditButton,
     DeleteButton,
+    TextInput
 } from "react-admin";
 
 const VisitList = (props) => {
+    const visitsFilters = [
+        <TextInput label="Ամսաթիվ"  source="visitDate" alwaysOn />,
+        <TextInput label="Բաժանմունք" source="department" alwaysOn/>,
+    ];
     return (
-        <List {...props}>
+        <List 
+            {...props}
+            filters={visitsFilters}
+        >
             <Datagrid>
                 <DateField label="Ամսաթիվ" source="visitDate"/>
                 <TextField label="Բաժանմունք" source="department"/>

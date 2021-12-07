@@ -19,13 +19,20 @@ function App() {
     <Admin dataProvider={data}>
         <Resource
           icon={IconPerson}
-          options={{ label: 'Հիվանդներ' }} 
+          options={{ label: 'Հիվանդներ' }}
           name="users"
           list={UserList}
           create={UserCreate}
           edit={UserEdit}
         />
-        <Resource icon={IconDashboard} options={{ label: 'Այցելություններ' }} name="visits" list={VisitList} create={VisitCreate} edit={VisitEdit}/>
+        <Resource
+          icon={IconDashboard}
+          options={{ label: 'Այցելություններ' }}
+          name="visits"
+          list={VisitList}
+          create={VisitCreate}
+          edit={VisitEdit}
+        />
     </Admin>
   );
 }
