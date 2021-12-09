@@ -1,33 +1,34 @@
 import * as React from "react";
 import { Admin, Resource } from 'react-admin';
 import restProvider from 'ra-data-simple-rest';
-import UserList from './components/UserList';
-import UserCreate from './components/UserCreate';
-import UserEdit from './components/UserEdit';
+import PatientList from './components/PatientList';
+import PatientCreate from './components/PatientCreate';
+import PatientEdit from './components/PatientEdit';
 import VisitList from './components/VisitList';
 import VisitCreate from './components/VisitCreate';
 import VisitEdit from './components/VisitEdit';
 import IconPerson from '@material-ui/icons/Person';
 import IconDashboard from '@material-ui/icons/Dashboard';
-
+import translation from "./translation.json"
 
 import './App.css';
 
 function App() {
-  const data = restProvider('http://localhost:3000');
+  console.log("url => ", process.env)
+  const data = restProvider(process.env.REACT_APP_URL);
   return (
     <Admin dataProvider={data}>
         <Resource
           icon={IconPerson}
-          options={{ label: 'Հիվանդներ' }}
+          options={{ label: translation.menu.patients }}
           name="users"
-          list={UserList}
-          create={UserCreate}
-          edit={UserEdit}
+          list={PatientList}
+          create={PatientCreate}
+          edit={PatientEdit}
         />
         <Resource
           icon={IconDashboard}
-          options={{ label: 'Այցելություններ' }}
+          options={{ label: translation.menu.visits }}
           name="visits"
           list={VisitList}
           create={VisitCreate}

@@ -8,26 +8,28 @@ import {
     DeleteButton,
     TextInput
 } from "react-admin";
+import translation from "../translation.json"
 
 const VisitList = (props) => {
+    var visit = translation.visit
     const visitsFilters = [
-        <TextInput label="Ամսաթիվ"  source="visitDate" alwaysOn />,
-        <TextInput label="Բաժանմունք" source="department" alwaysOn/>,
+        <TextInput label={visit.visitDate}  source="visitDate" alwaysOn />,
+        <TextInput label={visit.department} source="department" alwaysOn/>,
     ];
     return (
-        <List 
+        <List
             {...props}
             filters={visitsFilters}
         >
             <Datagrid>
-                <DateField label="Ամսաթիվ" source="visitDate"/>
-                <TextField label="Բաժանմունք" source="department"/>
-                <TextField label="Բժշկի անուն" source="doctorName"/>
-                <TextField label="Վճարում" source="sale"/>
-                <TextField label="Դեղորայք" source="medication"/>
-                <DateField label="Դուրսգրման ամսաթիվ" source="dischrgeDate"/>
-                <EditButton label="Փոփոխել" basePath="/visits"/>
-                <DeleteButton label="Ջնջել" source="/visits"/>
+                <DateField label={visit.visitDate} source="visitDate"/>
+                <TextField label={visit.department} source="department"/>
+                <TextField label={visit.doctorName} source="doctorName"/>
+                <TextField label={visit.sale} source="sale"/>
+                <TextField label={visit.medication} source="medication"/>
+                <DateField label={visit.dischrgeDate} source="dischrgeDate"/>
+                <EditButton label={visit.editButton} basePath="/visits"/>
+                <DeleteButton label={visit.deleteButton} source="/visits"/>
             </Datagrid>
         </List>
     )

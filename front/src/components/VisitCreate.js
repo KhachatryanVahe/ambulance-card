@@ -1,16 +1,18 @@
 import React from "react";
 import {Create, SimpleForm, TextInput, DateInput} from "react-admin"
+import translation from "../translation.json"
 
 const VisitCreate = (props) => {
+    var visit = translation.visit
     return(
-        <Create title={"Ավելացնել այցելություն"} {...props}>
+        <Create title={visit.createTitle} {...props}>
             <SimpleForm>
-                <DateInput label="Ամսաթիվ" source="visitDate"/>
-                <TextInput label="Բաժանմունք" source="department"/>
-                <TextInput label="Բժշկի անուն" source="doctorName"/>
-                <TextInput label="Վճարում" source="sale"/>
-                <TextInput label="Դեղորայք" source="medication"/>
-                <DateInput label="Դուրսգրման ամսաթիվ" source="dischrgeDate"/>
+                <DateInput label={visit.visitDate} source="visitDate"/>
+                <TextInput label={visit.department} source="department"/>
+                <TextInput label={visit.doctorName} source="doctorName"/>
+                <TextInput label={visit.sale} source="sale"/>
+                <TextInput label={visit.medication} source="medication"/>
+                <DateInput label={visit.dischrgeDate} source="dischrgeDate"/>
             </SimpleForm>
         </Create>
     )

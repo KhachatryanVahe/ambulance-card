@@ -1,0 +1,31 @@
+{
+    "user" : {
+        "id" : "Անձնագիր",
+        "name" : "Անուն, Ազգանուն",
+        "phone" : "Հեռախոս",
+        "birthDate" : "Ծնդյան օր",
+        "bloodGroup" : "Արյան խումբ",
+        "address" : "Հասցե",
+        "editButton" : "Փոփոխել",
+        "deleteButton" : "Ջնջել",
+        "button" : "Այցելություն",
+        "editTitle" : "Փոփոխել հիվանդի տվյալները",
+        "createTitle" : "Ավելացնել հիվանդ"
+    },
+    "visit" : {
+        "visitDate" : "Ամսաթիվ",
+        "department" : "Բաժանմունք",
+        "doctorName" : "Բժշկի անուն",
+        "sale" : "Վճարում",
+        "medication" : "Դեղորայք",
+        "dischrgeDate" : "Դուրսգրման ամսաթիվ",
+        "editButton" : "Փոփոխել",
+        "deleteButton" : "Ջնջել",
+        "editTitle" : "Փոփոխել այցելությունը",
+        "createTitle" : "Ավելացնել այցելություն"
+    },
+    "menu" : {
+        "patients" : "Հիվանդներ",
+        "visits" : "Այցելություններ"
+    }
+}

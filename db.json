@@ -89,25 +89,33 @@
       "address": "sahd ashdg"
     }
   ],
-
   "visits": [
     {
-      "id": 1,
       "visitDate": "1989-11-23",
       "department": "virahatakan",
       "doctorName": "Petrosyan",
       "sale": "20000",
       "medication": "tempalgin",
-      "dischrgeDate": "2021-11-23"
+      "dischrgeDate": "2021-11-23",
+      "id": 1
     },
     {
-      "id": 2,
       "visitDate": "1989-11-23",
       "department": "virahatakan",
       "doctorName": "Petrosyan",
       "sale": "20000",
       "medication": "tempalgin",
-      "dischrgeDate": "2021-11-23"
+      "dischrgeDate": "2021-11-23",
+      "id": 2
+    },
+    {
+      "visitDate": "2021-12-10",
+      "department": "asdgas",
+      "doctorName": "asdfsadfa",
+      "sale": "sadfas",
+      "medication": "asdfasg",
+      "dischrgeDate": "2021-12-23",
+      "id": 3
     }
   ]
 }
