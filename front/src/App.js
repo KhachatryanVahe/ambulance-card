@@ -1,27 +1,29 @@
 import * as React from "react";
 import { Admin, Resource } from 'react-admin';
-import restProvider from 'ra-data-simple-rest';
+import IconPerson from '@material-ui/icons/Person';
+import IconDashboard from '@material-ui/icons/Dashboard';
+
 import PatientList from './components/PatientList';
 import PatientCreate from './components/PatientCreate';
 import PatientEdit from './components/PatientEdit';
 import VisitList from './components/VisitList';
 import VisitCreate from './components/VisitCreate';
 import VisitEdit from './components/VisitEdit';
-import IconPerson from '@material-ui/icons/Person';
-import IconDashboard from '@material-ui/icons/Dashboard';
-import translation from "./translation.json"
+import translation from "./translation.json";
+import dataProv from "./dataProv";
 
 import './App.css';
 
 function App() {
-  console.log("url => ", process.env)
-  const data = restProvider(process.env.REACT_APP_URL);
+  const data = dataProv(process.env.REACT_APP_URL)
+  console.log("data => ", data)
+
   return (
     <Admin dataProvider={data}>
         <Resource
           icon={IconPerson}
           options={{ label: translation.menu.patients }}
-          name="users"
+          name="patients"
           list={PatientList}
           create={PatientCreate}
           edit={PatientEdit}
@@ -31,7 +33,7 @@ function App() {
           options={{ label: translation.menu.visits }}
           name="visits"
           list={VisitList}
-          create={VisitCreate}
+          // create={VisitCreate}
           edit={VisitEdit}
         />
     </Admin>

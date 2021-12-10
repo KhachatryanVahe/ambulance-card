@@ -28,7 +28,7 @@ const VisitList = (props) => {
                 <TextField label={visit.sale} source="sale"/>
                 <TextField label={visit.medication} source="medication"/>
                 <DateField label={visit.dischrgeDate} source="dischrgeDate"/>
-                <EditButton label={visit.editButton} basePath="/visits"/>
+                <EditButton label={visit.editButton} source="/visits"/>
                 <DeleteButton label={visit.deleteButton} source="/visits"/>
             </Datagrid>
         </List>

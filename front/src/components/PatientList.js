@@ -5,33 +5,38 @@ import {
     Datagrid,
     EditButton,
     DeleteButton,
-    Button,
     TextInput
 } from "react-admin";
+import { Link } from "react-router-dom";
 import translation from "../translation.json"
 
 const PatientList = (props) => {
-    var user = translation.user
-    const usersFilters = [
-        <TextInput label={user.id}  source="id" alwaysOn />,
-        <TextInput label={user.name} source="name" alwaysOn/>,
+    var patient = translation.patient
+    const patientsFilters = [
+        <TextInput label={patient.id}  source="id" alwaysOn />,
+        <TextInput label={patient.name} source="name" alwaysOn/>,
     ];
-
+    console.log("props => ", props)
     return (
         <List
             {...props}
-            filters={usersFilters}
+            filters={patientsFilters}
         >
             <Datagrid>
-                <TextField label={user.id} source="id"/>
-                <TextField label={user.name} source="name"/>
-                <TextField label={user.phone} source="phone"/>
-                <TextField label={user.birthDate} source="birthDate"/>
-                <TextField label={user.bloodGroup} source="bloodGroup"/>
-                <TextField label={user.address} source="address"/>
-                <EditButton label={user.editButton} basePath="/users"/>
-                <DeleteButton label={user.deleteButton} source="/users"/>
-                <Button label={user.button} basePath="/visits"/>
+                <TextField label={patient.id} source="id"/>
+                <TextField label={patient.name} source="name"/>
+                <TextField label={patient.phone} source="phone"/>
+                <TextField label={patient.birthDate} source="birthDate"/>
+                <TextField label={patient.bloodGroup} source="bloodGroup"/>
+                <TextField label={patient.address} source="address"/>
+                <EditButton label={patient.editButton} source="/patients"/>
+                <DeleteButton label={patient.deleteButton} source="/patients"/>
+                <Link to={{
+                    pathname: "/patients",
+                    search: `?id=10`//${patient.id}`,
+                }}>
+                    {patient.visits}
+                </Link>
             </Datagrid>
         </List>
     )
