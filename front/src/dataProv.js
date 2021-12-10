@@ -2,7 +2,7 @@ import { stringify } from 'query-string';
 import { fetchUtils } from 'ra-core';
 
 var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
+    __assign = Object.assign || function (t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
             s = arguments[i];
             for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
@@ -49,6 +49,7 @@ export default (function (apiUrl, httpClient, countHeader) {
     if (countHeader === void 0) { countHeader = 'Content-Range'; }
     return ({
         getList: function (resource, params) {
+            console.log({ resource, params });
             var _a = params.pagination, page = _a.page, perPage = _a.perPage;
             var _b = params.sort, field = _b.field, order = _b.order;
             var rangeStart = (page - 1) * perPage;
@@ -58,7 +59,12 @@ export default (function (apiUrl, httpClient, countHeader) {
                 range: JSON.stringify([rangeStart, rangeEnd]),
                 filter: JSON.stringify(params.filter),
             };
-            var url = apiUrl + "/" + resource + "?" + stringify(query);
+            let customFilter = '';
+            Object.keys(params.filter).forEach(key => {
+                customFilter += `${key}=${params.filter[key]}&`;
+            });
+            var url = apiUrl + "/" + resource + "?" + customFilter;
+            console.log('-------- url: ', url);
             var options = countHeader === 'Content-Range'
                 ? {
                     // Chrome doesn't return `Content-Range` header if no `Range` is provided in the request.
@@ -72,8 +78,8 @@ export default (function (apiUrl, httpClient, countHeader) {
                 if (!headers.has(countHeader)) {
                     throw new Error("The " + countHeader + " header is missing in the HTTP Response. The simple REST data provider expects responses for lists of resources to contain this header with the total number of results to build the pagination. If you are using CORS, did you declare " + countHeader + " in the Access-Control-Expose-Headers header?");
                 }
-                console.log("url => ", url)
-                console.log("json => ", json)
+                // console.log("url => ", url)
+                // console.log("json => ", json)
                 return {
                     data: json,
                     total: countHeader === 'Content-Range'
@@ -149,10 +155,14 @@ export default (function (apiUrl, httpClient, countHeader) {
                     method: 'PUT',
                     body: JSON.stringify(params.data),
                 });
-            })).then(function (responses) { return ({ data: responses.map(function (_a) {
-                    var json = _a.json;
-                    return json.id;
-                }) }); });
+            })).then(function (responses) {
+                return ({
+                    data: responses.map(function (_a) {
+                        var json = _a.json;
+                        return json.id;
+                    })
+                });
+            });
         },
         create: function (resource, params) {
             return httpClient(apiUrl + "/" + resource, {
@@ -185,12 +195,14 @@ export default (function (apiUrl, httpClient, countHeader) {
                         'Content-Type': 'text/plain',
                     }),
                 });
-            })).then(function (responses) { return ({
-                data: responses.map(function (_a) {
-                    var json = _a.json;
-                    return json.id;
-                }),
-            }); });
+            })).then(function (responses) {
+                return ({
+                    data: responses.map(function (_a) {
+                        var json = _a.json;
+                        return json.id;
+                    }),
+                });
+            });
         },
     });
 });

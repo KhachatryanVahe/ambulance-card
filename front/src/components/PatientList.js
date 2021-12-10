@@ -5,7 +5,8 @@ import {
     Datagrid,
     EditButton,
     DeleteButton,
-    TextInput
+    TextInput,
+    FunctionField
 } from "react-admin";
 import { Link } from "react-router-dom";
 import translation from "../translation.json"
@@ -13,8 +14,8 @@ import translation from "../translation.json"
 const PatientList = (props) => {
     var patient = translation.patient
     const patientsFilters = [
-        <TextInput label={patient.id}  source="id" alwaysOn />,
-        <TextInput label={patient.name} source="name" alwaysOn/>,
+        <TextInput label={patient.id} source="id" alwaysOn />,
+        <TextInput label={patient.name} source="name" alwaysOn />,
     ];
     console.log("props => ", props)
     return (
@@ -23,20 +24,20 @@ const PatientList = (props) => {
             filters={patientsFilters}
         >
             <Datagrid>
-                <TextField label={patient.id} source="id"/>
-                <TextField label={patient.name} source="name"/>
-                <TextField label={patient.phone} source="phone"/>
-                <TextField label={patient.birthDate} source="birthDate"/>
-                <TextField label={patient.bloodGroup} source="bloodGroup"/>
-                <TextField label={patient.address} source="address"/>
-                <EditButton label={patient.editButton} source="/patients"/>
-                <DeleteButton label={patient.deleteButton} source="/patients"/>
-                <Link to={{
-                    pathname: "/patients",
-                    search: `?id=10`//${patient.id}`,
+                <TextField label={patient.id} source="id" />
+                <TextField label={patient.name} source="name" />
+                <TextField label={patient.phone} source="phone" />
+                <TextField label={patient.birthDate} source="birthDate" />
+                <TextField label={patient.bloodGroup} source="bloodGroup" />
+                <TextField label={patient.address} source="address" />
+                <EditButton label={patient.editButton} source="/patients" />
+                <DeleteButton label={patient.deleteButton} source="/patients" />
+                <FunctionField label="Visits" render={record => <Link to={{
+                    pathname: "/visits",
+                    search: `?filter=${JSON.stringify({ patientId: record.id })}`,
                 }}>
                     {patient.visits}
-                </Link>
+                </Link>} />
             </Datagrid>
         </List>
     )

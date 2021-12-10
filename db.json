@@ -97,7 +97,8 @@
       "sale": "20000",
       "medication": "tempalgin",
       "dischrgeDate": "2021-11-23",
-      "id": 1
+      "id": 1,
+      "patientId": 1
     },
     {
       "visitDate": "1989-11-23",
@@ -106,7 +107,8 @@
       "sale": "20000",
       "medication": "tempalgin",
       "dischrgeDate": "2021-11-23",
-      "id": 2
+      "id": 2,
+      "patientId": 1
     },
     {
       "visitDate": "2021-12-10",
@@ -115,7 +117,8 @@
       "sale": "sadfas",
       "medication": "asdfasg",
       "dischrgeDate": "2021-12-23",
-      "id": 3
+      "id": 3,
+      "patientId": 2
     }
   ]
 }
