@@ -9,6 +9,7 @@ import {
     FunctionField
 } from "react-admin";
 import { Link } from "react-router-dom";
+
 import translation from "../translation.json"
 
 const PatientList = (props) => {
@@ -17,7 +18,6 @@ const PatientList = (props) => {
         <TextInput label={patient.id} source="id" alwaysOn />,
         <TextInput label={patient.name} source="name" alwaysOn />,
     ];
-    console.log("props => ", props)
     return (
         <List
             {...props}

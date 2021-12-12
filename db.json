@@ -91,8 +91,8 @@
   ],
   "visits": [
     {
-      "visitDate": "1989-11-23",
-      "department": "virahatakan",
+      "visitDate": "2021-12-13",
+      "department": "վիրահատական",
       "doctorName": "Petrosyan",
       "sale": "20000",
       "medication": "tempalgin",
@@ -101,7 +101,7 @@
       "patientId": 1
     },
     {
-      "visitDate": "1989-11-23",
+      "visitDate": "2021-12-27",
       "department": "virahatakan",
       "doctorName": "Petrosyan",
       "sale": "20000",
@@ -119,6 +119,15 @@
       "dischrgeDate": "2021-12-23",
       "id": 3,
       "patientId": 2
+    },
+    {
+      "visitDate": "2021-12-23",
+      "department": "վիրահատական",
+      "doctorName": "Ասատրյան",
+      "sale": "236848",
+      "medication": "dhf",
+      "dischrgeDate": "2021-12-23",
+      "id": 4
     }
   ]
 }

@@ -6,14 +6,15 @@ import {
     Datagrid,
     EditButton,
     DeleteButton,
-    TextInput
+    TextInput,
+    DateInput
 } from "react-admin";
 import translation from "../translation.json"
 
 const VisitList = (props) => {
     var visit = translation.visit
     const visitsFilters = [
-        <TextInput label={visit.visitDate}  source="visitDate" alwaysOn />,
+        <DateInput label={visit.visitDate}  source="visitDate" alwaysOn />,
         <TextInput label={visit.department} source="department" alwaysOn/>,
     ];
     return (

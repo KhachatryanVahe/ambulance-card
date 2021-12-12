@@ -49,22 +49,24 @@ export default (function (apiUrl, httpClient, countHeader) {
     if (countHeader === void 0) { countHeader = 'Content-Range'; }
     return ({
         getList: function (resource, params) {
-            console.log({ resource, params });
+            console.log("res -> ", { resource, params });
+
             var _a = params.pagination, page = _a.page, perPage = _a.perPage;
             var _b = params.sort, field = _b.field, order = _b.order;
             var rangeStart = (page - 1) * perPage;
             var rangeEnd = page * perPage - 1;
-            var query = {
-                sort: JSON.stringify([field, order]),
-                range: JSON.stringify([rangeStart, rangeEnd]),
-                filter: JSON.stringify(params.filter),
-            };
             let customFilter = '';
             Object.keys(params.filter).forEach(key => {
                 customFilter += `${key}=${params.filter[key]}&`;
             });
+            var query = {
+                sort: JSON.stringify([field, order]),
+                range: JSON.stringify([rangeStart, rangeEnd]),
+                filter: customFilter,
+            };
             var url = apiUrl + "/" + resource + "?" + customFilter;
             console.log('-------- url: ', url);
+            
             var options = countHeader === 'Content-Range'
                 ? {
                     // Chrome doesn't return `Content-Range` header if no `Range` is provided in the request.
@@ -78,8 +80,6 @@ export default (function (apiUrl, httpClient, countHeader) {
                 if (!headers.has(countHeader)) {
                     throw new Error("The " + countHeader + " header is missing in the HTTP Response. The simple REST data provider expects responses for lists of resources to contain this header with the total number of results to build the pagination. If you are using CORS, did you declare " + countHeader + " in the Access-Control-Expose-Headers header?");
                 }
-                // console.log("url => ", url)
-                // console.log("json => ", json)
                 return {
                     data: json,
                     total: countHeader === 'Content-Range'
