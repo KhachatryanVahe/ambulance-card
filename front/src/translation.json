@@ -10,7 +10,8 @@
         "deleteButton" : "Ջնջել",
         "visits" : "Այցելություն",
         "editTitle" : "Փոփոխել հիվանդի տվյալները",
-        "createTitle" : "Ավելացնել հիվանդ"
+        "createTitle" : "Ավելացնել հիվանդ",
+        "patientsTitle" : "Հիվանդներ"
     },
     "visit" : {
         "visitDate" : "Ամսաթիվ",
@@ -22,10 +23,7 @@
         "editButton" : "Փոփոխել",
         "deleteButton" : "Ջնջել",
         "editTitle" : "Փոփոխել այցելությունը",
-        "createTitle" : "Ավելացնել այցելություն"
-    },
-    "menu" : {
-        "patients" : "Հիվանդներ",
-        "visits" : "Այցելություններ"
+        "createTitle" : "Ավելացնել այցելություն",
+        "visitsTitle" : "Այցելություններ"
     }
 }

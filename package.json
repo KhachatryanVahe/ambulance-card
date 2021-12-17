@@ -7,16 +7,20 @@
     "start": "mkdir static/uploads & nodemon server",
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix front",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "nw" : "nw front"
   },
   "keywords": [],
   "author": "Vahe Khachatryan",
   "dependencies": {
-    "@mui/icons-material": "^5.2.1",
     "concurrently": "^6.4.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "json-server": "^0.17.0"
+  },
+  "devDependencies": {
+    "nw": "^0.59.0-sdk",
+    "nw-builder": "^3.5.7"
   }
 }

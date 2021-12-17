@@ -21,6 +21,8 @@ const VisitList = (props) => {
         <List
             {...props}
             filters={visitsFilters}
+            title={visit.visitsTitle}
+            exporter={false}
         >
             <Datagrid>
                 <DateField label={visit.visitDate} source="visitDate"/>

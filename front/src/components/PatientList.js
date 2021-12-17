@@ -22,6 +22,9 @@ const PatientList = (props) => {
         <List
             {...props}
             filters={patientsFilters}
+            title={patient.patientsTitle}
+            exporter={false}
+            pagination={false}
         >
             <Datagrid>
                 <TextField label={patient.id} source="id" />

@@ -6,6 +6,6 @@ import translation from "../translation.json";
 
 export const MenuBar = (props) => (
     <Menu {...props}>
-        <MenuItemLink to="/patients" primaryText={translation.menu.patients} leftIcon={<IconPerson />}/>
+        <MenuItemLink to="/patients" primaryText={translation.patient.patientsTitle} leftIcon={<IconPerson />}/>
     </Menu>
 );
