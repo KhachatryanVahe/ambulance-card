@@ -5,96 +5,88 @@
       "name": "Leanne Graham",
       "phone": "1-770-736-8031 x56442",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Apt. 55685"
+      "address": "Apt. 55685",
+      "appa": "appa2"
     },
     {
       "id": 2,
       "name": "Ervin Howell",
       "phone": "010-692-6593 x09125",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 879"
+      "address": "Suite 879",
+      "appa": "appa2"
     },
     {
       "id": 3,
       "name": "Clementine Bauch",
       "phone": "1-463-123-4447",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 847"
+      "address": "Suite 847",
+      "appa": "appa6"
     },
     {
       "id": 4,
       "name": "Patricia Lebsack",
       "phone": "493-170-9623 x156",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Apt. 692"
+      "address": "Apt. 692",
+      "appa": "appa2"
     },
     {
       "id": 5,
       "name": "Chelsey Dietrich",
       "phone": "(254)954-1289",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 351"
+      "address": "Suite 351",
+      "appa": "appa2"
     },
     {
       "id": 6,
       "name": "Mrs. Dennis Schulist",
       "phone": "123-456-789",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Apt. 950"
+      "address": "Apt. 950",
+      "appa": "appa2"
     },
     {
       "id": 7,
       "name": "Kurtis Weissnat",
       "phone": "123-456-789",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 280"
+      "address": "Suite 280",
+      "appa": "appa2"
     },
     {
       "id": 8,
       "name": "Nicholas Runolfsdottir V",
       "phone": "123-456-789",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 729"
+      "address": "Suite 729",
+      "appa": "appa2"
     },
     {
       "id": 9,
       "name": "Glenna Reichert",
       "phone": "123-456-789",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 449"
+      "address": "Suite 449",
+      "appa": "appa2"
     },
     {
       "id": 10,
       "name": "Clementina DuBuque",
       "phone": "123-456-789",
       "birthDate": "1989-11-23",
-      "bloodGroup": "2",
-      "address": "Suite 198"
+      "address": "Suite 198",
+      "appa": "appa2"
     },
     {
       "id": "53",
       "name": "AsoASo",
       "phone": "1236584",
       "birthDate": "2002-01-23",
-      "bloodGroup": "2",
-      "address": "sahd ashdg"
-    },
-    {
-      "id": "apasd564",
-      "name": "Վահան ",
-      "phone": "098 782 461",
-      "birthDate": "2009-01-26",
-      "bloodGroup": "6",
-      "address": "Արտ․ 55685"
+      "address": "sahd ashdg",
+      "appa": "appa2"
     }
   ],
   "visits": [
@@ -136,6 +128,15 @@
       "medication": "dhf",
       "dischrgeDate": "2021-12-23",
       "id": 4
+    }
+  ],
+  "queue": [
+    {
+      "name": "JHDSG SAJ",
+      "date": "2021-12-08T06:54:00.000Z",
+      "doctorName": "Ասատրյան",
+      "department": "gynecology",
+      "id": 1
     }
   ]
 }

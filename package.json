@@ -8,15 +8,13 @@
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix front",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "nw" : "nw front"
+    "nw": "nw front"
   },
   "keywords": [],
   "author": "Vahe Khachatryan",
   "dependencies": {
     "concurrently": "^6.4.0",
-    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
     "json-server": "^0.17.0"
   },
   "devDependencies": {
