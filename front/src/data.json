@@ -1,0 +1,22 @@
+{
+    "departments" : [
+        {"id" : "birthplace", "name" : "Ծնարան"},
+        {"id" : "pathology", "name" : "Պաթոլոգիա"},
+        {"id" : "gynecology", "name" : "Գինեկոլոգիա"},
+        {"id" : "diagnostic", "name" : "Ախտորոշիչ"},
+        {"id" : "other", "name" : "Այլ"}
+    ],
+    "appa" : [
+        {"id" : "appa1", "name" : "Ռոսգոսստրախ-Արմենիան"},
+        {"id" : "appa2", "name" : "Ինգո Արմենիան"},
+        {"id" : "appa3", "name" : "Նաիրի Ինշուրանս"},
+        {"id" : "appa4", "name" : "Ռեսո Ինշուրանս"},
+        {"id" : "appa5", "name" : "Սիլ Ինշուրանս"},
+        {"id" : "appa6", "name" : "Արմենիա Ինշուրանս"},
+        {"id" : "appa6", "name" : "Այլ"}
+    ],
+    "payment" : [
+        {"id" : "paid", "name" : "վաճարված"},
+        {"id" : "unpaid", "name" : "չվաճարված"}
+    ]
+}
