@@ -82,52 +82,24 @@
     },
     {
       "id": "53",
-      "name": "AsoASo",
+      "name": "Վահան ",
       "phone": "1236584",
-      "birthDate": "2002-01-23",
-      "address": "sahd ashdg",
-      "appa": "appa2"
+      "birthDate": "2021-12-24",
+      "address": "Apt. 55685",
+      "appa": "appa4"
     }
   ],
   "visits": [
     {
-      "visitDate": "2021-12-13",
-      "department": "վիրահատական",
-      "doctorName": "Petrosyan",
-      "sale": "20000",
-      "medication": "tempalgin",
-      "dischrgeDate": "2021-11-23",
-      "id": 1,
-      "patientId": 1
-    },
-    {
-      "visitDate": "2021-12-27",
-      "department": "virahatakan",
-      "doctorName": "Petrosyan",
-      "sale": "20000",
-      "medication": "tempalgin",
-      "dischrgeDate": "2021-11-23",
-      "id": 2,
-      "patientId": 1
-    },
-    {
-      "visitDate": "2021-12-10",
-      "department": "asdgas",
+      "visitDate": "2021-12-16",
+      "department": "pathology",
       "doctorName": "asdfsadfa",
-      "sale": "sadfas",
-      "medication": "asdfasg",
+      "providedService": "asdf",
+      "saleKey": "asdf",
+      "paymentStatus": "paid",
       "dischrgeDate": "2021-12-23",
-      "id": 3,
-      "patientId": 2
-    },
-    {
-      "visitDate": "2021-12-23",
-      "department": "վիրահատական",
-      "doctorName": "Ասատրյան",
-      "sale": "236848",
-      "medication": "dhf",
-      "dischrgeDate": "2021-12-23",
-      "id": 4
+      "id": 1,
+      "patientId": "1"
     }
   ],
   "queue": [

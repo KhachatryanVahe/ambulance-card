@@ -19,6 +19,7 @@ import {
 } from "react-admin"
 
 import {VisitsListActions, VisitShowActions, VisitEditActions} from './Actions'
+import data from "../data.json"
 import translation from "../translation.json"
 
 
@@ -30,18 +31,19 @@ export const VisitList = (props) => {
     ];
     return (
         <List
-        {...props}
-        filters={visitsFilters}
-        title={visit.visitsTitle}
-        actions={<VisitsListActions/>}
-        pagination={false}
+            {...props}
+            filters={visitsFilters}
+            title={visit.visitsTitle}
+            actions={<VisitsListActions/>}
+            pagination={false}
         >
             <Datagrid>
                 <DateField sortable={false} label={visit.visitDate} source="visitDate"/>
-                <TextField sortable={false} label={visit.department} source="department"/>
+                <SelectField sortable={false} label={visit.department} source="department" choices={data.departments}/>
                 <TextField sortable={false} label={visit.doctorName} source="doctorName"/>
-                <TextField sortable={false} label={visit.sale} source="sale"/>
-                <TextField sortable={false} label={visit.medication} source="medication"/>
+                <TextField sortable={false} label={visit.providedService} source="providedService"/>
+                <TextField sortable={false} label={visit.saleKey} source="saleKey"/>
+                <SelectField sortable={false} label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateField sortable={false} label={visit.dischrgeDate} source="dischrgeDate"/>
                 <EditButton sortable={false} label={visit.editButton} source="/visits"/>
                 <DeleteButton sortable={false} label={visit.deleteButton} source="/visits"/>
@@ -57,10 +59,11 @@ export const VisitCreate = (props) => {
         <Create title={visit.createTitle} {...props}>
             <SimpleForm>
                 <DateInput label={visit.visitDate} source="visitDate"/>
-                <TextInput label={visit.department} source="department"/>
+                <SelectInput label={visit.department} source="department" choices={data.departments}/>
                 <TextInput label={visit.doctorName} source="doctorName"/>
-                <TextInput label={visit.sale} source="sale"/>
-                <TextInput label={visit.medication} source="medication"/>
+                <TextInput label={visit.providedService} source="providedService"/>
+                <TextInput label={visit.saleKey} source="saleKey"/>
+                <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateInput label={visit.dischrgeDate} source="dischrgeDate"/>
                 <TextInput disabled source="patientId" value={""}/>
             </SimpleForm>
@@ -78,11 +81,13 @@ export const VisitEdit = (props) => {
         >
             <SimpleForm>
                 <DateInput label={visit.visitDate} source="visitDate"/>
-                <TextInput label={visit.department} source="department"/>
+                <SelectInput label={visit.department} source="department" choices={data.departments}/>
                 <TextInput label={visit.doctorName} source="doctorName"/>
-                <TextInput label={visit.sale} source="sale"/>
-                <TextInput label={visit.medication} source="medication"/>
+                <TextInput label={visit.providedService} source="providedService"/>
+                <TextInput label={visit.saleKey} source="saleKey"/>
+                <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateInput label={visit.dischrgeDate} source="dischrgeDate"/>
+                <TextInput disabled source="patientId" value={""}/>
             </SimpleForm>
         </Edit>
     )
@@ -91,17 +96,18 @@ export const VisitEdit = (props) => {
 export const VisitShow = (props) => {
     var visit = translation.visit
     return(
-        <Show 
+        <Show
             title={visit.showTitle}
             actions={<VisitShowActions/>}
             {...props}
         >
             <SimpleShowLayout>
                 <DateField label={visit.visitDate} source="visitDate"/>
-                <TextField label={visit.department} source="department"/>
+                <SelectField label={visit.department} source="department" choices={data.departments}/>
                 <TextField label={visit.doctorName} source="doctorName"/>
-                <TextField label={visit.sale} source="sale"/>
-                <TextField label={visit.medication} source="medication"/>
+                <TextField label={visit.providedService} source="providedService"/>
+                <TextField label={visit.saleKey} source="saleKey"/>
+                <SelectField label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateField label={visit.dischrgeDate} source="dischrgeDate"/>
             </SimpleShowLayout>
         </Show>
