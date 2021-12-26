@@ -1,4 +1,6 @@
 import { CreateButton, EditButton, ShowButton, ExportButton, TopToolbar } from 'react-admin';
+import { Link } from "react-router-dom";
+
 import translation from "../translation.json"
 
 export const PatientListActions = ({ basePath, data, resource }) => {
@@ -14,7 +16,7 @@ export const PatientShowActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
             <EditButton basePath={basePath} record={data} label={translation.patient.editButton}/>
-            <CreateButton basePath={`/visits`} label={translation.visit.createButton}/>
+            <CreateButton to={`/visits/create?${data.id}`} label={translation.visit.createButton}/>
         </TopToolbar>
     )
 };
@@ -30,7 +32,7 @@ export const PatientEditActions = ({ basePath, data, resource }) => {
 export const VisitsListActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <CreateButton basePath={basePath} label={translation.visit.createButton}/>
+            {/* <CreateButton basePath={basePath} label={translation.visit.createButton}/> */}
             <ExportButton/>
         </TopToolbar>
     )

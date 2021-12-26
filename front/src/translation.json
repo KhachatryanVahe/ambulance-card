@@ -1,6 +1,6 @@
 {
     "patient" : {
-        "id" : "Անձնագիր/Նույնական․ քարտ",
+        "id" : "Անձնագիր",
         "name" : "Անուն, Ազգանուն",
         "phone" : "Հեռախոս",
         "birthDate" : "Ծնդյան տարեթիվ",
@@ -10,7 +10,7 @@
         "editButton" : "Փոփոխել",
         "deleteButton" : "Ջնջել",
         "showButton" : "Տեսնել",
-        "visits" : "Այցելություն",
+        "visits" : "Այցելություններ",
         "editTitle" : "Փոփոխել հիվանդի տվյալները",
         "createTitle" : "Ավելացնել հիվանդ",
         "showTitle" : "Հիվանդ",
@@ -24,7 +24,7 @@
         "saleKey" : "Վճարման կոդ",
         "paymentStatus" : "Վճարման կարգավիճակ",
         "dischrgeDate" : "Դուրսգրման ամսաթիվ",
-        "createButton" : "Ավելացնել",
+        "createButton" : "Ավելացնել այցելություն",
         "editButton" : "Փոփոխել",
         "deleteButton" : "Ջնջել",
         "showButton" : "Տեսնել",

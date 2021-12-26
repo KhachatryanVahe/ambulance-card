@@ -91,6 +91,7 @@
   ],
   "visits": [
     {
+      "patientId": "1",
       "visitDate": "2021-12-16",
       "department": "pathology",
       "doctorName": "asdfsadfa",
@@ -98,8 +99,40 @@
       "saleKey": "asdf",
       "paymentStatus": "paid",
       "dischrgeDate": "2021-12-23",
-      "id": 1,
-      "patientId": "1"
+      "id": 1
+    },
+    {
+      "patientId": "4",
+      "visitDate": "2021-12-18",
+      "department": "pathology",
+      "doctorName": "Ասատրյան",
+      "providedService": "hjgj",
+      "saleKey": "dstg",
+      "paymentStatus": "paid",
+      "dischrgeDate": "2021-12-29",
+      "id": 3
+    },
+    {
+      "patientId": "2",
+      "visitDate": "2021-12-18",
+      "department": "gynecology",
+      "doctorName": "Ասատրյան",
+      "providedService": "hgfjgf",
+      "saleKey": "hgfgjv",
+      "paymentStatus": "unpaid",
+      "dischrgeDate": "2021-12-29",
+      "id": 4
+    },
+    {
+      "patientId": "1",
+      "visitDate": "2021-12-18",
+      "department": "other",
+      "doctorName": "SDF",
+      "providedService": "hgfjgf",
+      "saleKey": "dstg",
+      "paymentStatus": "unpaid",
+      "dischrgeDate": "2021-12-31",
+      "id": 5
     }
   ],
   "queue": [
