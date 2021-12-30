@@ -49,8 +49,6 @@ export default (function (apiUrl, httpClient, countHeader) {
     if (countHeader === void 0) { countHeader = 'Content-Range'; }
     return ({
         getList: function (resource, params) {
-            console.log("res -> ", { resource, params });
-
             var _a = params.pagination, page = _a.page, perPage = _a.perPage;
             var _b = params.sort, field = _b.field, order = _b.order;
             var rangeStart = (page - 1) * perPage;
@@ -65,8 +63,7 @@ export default (function (apiUrl, httpClient, countHeader) {
                 filter: customFilter,
             };
             var url = apiUrl + "/" + resource + "?" + customFilter;
-            console.log('-------- url: ', url);
-            
+
             var options = countHeader === 'Content-Range'
                 ? {
                     // Chrome doesn't return `Content-Range` header if no `Range` is provided in the request.
@@ -165,6 +162,11 @@ export default (function (apiUrl, httpClient, countHeader) {
             });
         },
         create: function (resource, params) {
+            if(resource === 'visits') {
+                const urlParts = window.location.href.split("/");
+                const patientId = urlParts[urlParts.length - 1];
+                params.data.patientId = patientId;
+            }
             return httpClient(apiUrl + "/" + resource, {
                 method: 'POST',
                 body: JSON.stringify(params.data),

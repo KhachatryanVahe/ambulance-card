@@ -9,7 +9,6 @@ import {
     TextInput,
     DateInput,
     SelectInput,
-    ReferenceInput,
     TextField,
     DateField,
     SelectField,
@@ -66,7 +65,6 @@ export const VisitCreate = (props) => {
                 <TextInput label={visit.saleKey} source="saleKey"/>
                 <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateInput label={visit.dischrgeDate} source="dischrgeDate"/>
-                <TextInput source="patientId" defaultValue={window.location.href.split("?")[1]}/>
             </SimpleForm>
         </Create>
     )

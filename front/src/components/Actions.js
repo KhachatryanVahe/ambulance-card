@@ -1,5 +1,4 @@
 import { CreateButton, EditButton, ShowButton, ExportButton, TopToolbar } from 'react-admin';
-import { Link } from "react-router-dom";
 
 import translation from "../translation.json"
 
@@ -16,7 +15,7 @@ export const PatientShowActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
             <EditButton basePath={basePath} record={data} label={translation.patient.editButton}/>
-            <CreateButton to={`/visits/create?${data.id}`} label={translation.visit.createButton}/>
+            <CreateButton to={`/visits/create/${data.id}`} label={translation.visit.createButton}/>
         </TopToolbar>
     )
 };
