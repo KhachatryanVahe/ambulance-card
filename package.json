@@ -2,23 +2,20 @@
   "name": "desktop-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "mkdir static/uploads & nodemon server",
+    "start": "node server",
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix front",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "nw": "nw front"
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "keywords": [],
   "author": "Vahe Khachatryan",
   "dependencies": {
-    "concurrently": "^6.4.0",
     "dotenv": "^10.0.0",
     "json-server": "^0.17.0"
   },
   "devDependencies": {
-    "nw": "^0.59.0-sdk",
-    "nw-builder": "^3.5.7"
+    "concurrently": "^7.0.0"
   }
 }

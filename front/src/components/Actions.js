@@ -5,7 +5,7 @@ import translation from "../translation.json"
 export const PatientListActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <CreateButton basePath={basePath} label={translation.visit.createButton}/>
+            <CreateButton basePath={basePath} label={translation.patient.createButton}/>
             <ExportButton/>
         </TopToolbar>
     )

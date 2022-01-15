@@ -27,7 +27,7 @@ export const VisitList = (props) => {
     var visit = translation.visit
     const visitsFilters = [
         <DateInput label={visit.visitDate}  source="visitDate" alwaysOn />,
-        <TextInput label={visit.department} source="department" alwaysOn/>,
+        <SelectInput label={visit.department} source="department" choices={data.departments} alwaysOn/>,
     ];
     return (
         <List

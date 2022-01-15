@@ -10,7 +10,7 @@ import dataProv from "./dataProv";
 import './App.css';
 
 function App() {
-  const url = "http://localhost:3006"
+  const url = "http://localhost:3000"
   const provider = dataProv(url)
   return (
     <Admin layout={CustomLayout} dataProvider={provider}>

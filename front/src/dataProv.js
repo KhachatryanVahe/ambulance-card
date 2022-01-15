@@ -63,7 +63,6 @@ export default (function (apiUrl, httpClient, countHeader) {
                 filter: customFilter,
             };
             var url = apiUrl + "/" + resource + "?" + customFilter;
-
             var options = countHeader === 'Content-Range'
                 ? {
                     // Chrome doesn't return `Content-Range` header if no `Range` is provided in the request.
