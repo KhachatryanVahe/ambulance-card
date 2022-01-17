@@ -16,7 +16,7 @@
         {"id" : "appa7", "name" : "Այլ"}
     ],
     "payment" : [
-        {"id" : "paid", "name" : "վաճարված"},
-        {"id" : "unpaid", "name" : "չվաճարված"}
+        {"id" : "paid", "name" : "վճարված"},
+        {"id" : "unpaid", "name" : "չվճարված"}
     ]
 }

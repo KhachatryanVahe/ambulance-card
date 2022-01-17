@@ -1,13 +1,15 @@
 require('dotenv').config();
 const path = require('path');
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router(path.join(__dirname, 'db.json'))
-const middlewares = require('./range')
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router(path.join(__dirname, 'db.json'));
+const middleware = require('./range');
+const middlewares = jsonServer.defaults({static: './public'});
 
 const PORT = process.env.PORT || 5000;
 
 server.use(middlewares)
+server.use(middleware)
 server.use(router)
 server.get('*', function (req, res) {
   res.json({ message: "Hello from server!" })
