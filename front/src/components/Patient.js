@@ -47,7 +47,7 @@ export const PatientList = (props) => {
                 <SelectField sortable={false} label={patient.appa} source="appa" choices={data.appa}/>
 
                 <EditButton sortable={false} label={patient.editButton} source="/patients" />
-                <DeleteButton sortable={false} label={patient.deleteButton} source="/patients" />
+                {/* <DeleteButton sortable={false} label={patient.deleteButton} source="/patients" /> */}
                 <ShowButton sortable={false} label={patient.showButton} source="/patients"/>
                 <FunctionField sortable={false} label={patient.visits} render={record => <Link to={{
                     pathname: "/visits",
