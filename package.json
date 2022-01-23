@@ -1,21 +1,47 @@
 {
-  "name": "desktop-app",
+  "name": "ambulance-card",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "main.js",
+  "build": {
+    "appId": "my.id",
+    "productName": "Ambulance cards",
+    "asar": false,
+    "directories": {
+      "buildResources": "public",
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "deb",
+      "category": "Utility"
+    }
+  },
   "scripts": {
+    "electron": "electron .",
+    "app:dir": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux",
     "start": "node server",
     "server": "json-server --watch db.json --port 5000 --middlewares ./range.js",
     "client": "npm start --prefix front",
     "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "keywords": [],
-  "author": "Vahe Khachatryan",
+  "author": {
+    "name" : "Vahe Khachatryan",
+    "email" : "vahe.khachatryan.1999@gmail.com"
+  },
   "dependencies": {
     "dotenv": "^10.0.0",
     "json-server": "^0.17.0"
   },
   "devDependencies": {
-    "concurrently": "^7.0.0"
+    "concurrently": "^7.0.0",
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.5"
   }
 }
