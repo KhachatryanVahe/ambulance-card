@@ -7,6 +7,7 @@
     "appId": "my.id",
     "productName": "Ambulance cards",
     "asar": false,
+    "icon": "public/favicon.ico",
     "directories": {
       "buildResources": "public",
       "output": "release"
