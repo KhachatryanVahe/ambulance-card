@@ -7,7 +7,6 @@
     "appId": "my.id",
     "productName": "Ambulance cards",
     "asar": false,
-    "icon": "public/favicon.ico",
     "directories": {
       "buildResources": "public",
       "output": "release"
@@ -17,7 +16,8 @@
     },
     "linux": {
       "target": "deb",
-      "category": "Utility"
+      "category": "Utility",
+      "icon": "public/favicon.ico"
     }
   },
   "scripts": {
@@ -33,8 +33,8 @@
   },
   "keywords": [],
   "author": {
-    "name" : "Vahe Khachatryan",
-    "email" : "vahe.khachatryan.1999@gmail.com"
+    "name": "Vahe Khachatryan",
+    "email": "vahe.khachatryan.1999@gmail.com"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

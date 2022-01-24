@@ -7,14 +7,17 @@ let mainWindow;
 function createWindow () {
 
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
+    title:'Ambulance cards',
     webPreferences: {
       nodeIntegration: true
-    }
+    },
+    icon: __dirname + '/public/favicon.ico'
   })
-
-  mainWindow.loadURL('http://localhost:5000')
+  let HOST = process.env.HOST
+  let PORT = process.env.PORT || 5000
+  mainWindow.loadURL(`http://${HOST}:${PORT}`)
   mainWindow.on('closed', function () {
     mainWindow = null
   })
