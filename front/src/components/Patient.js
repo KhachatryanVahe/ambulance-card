@@ -12,7 +12,6 @@ import {
     FunctionField,
     EditButton,
     ShowButton,
-    DeleteButton,
     TextInput,
     DateInput,
     SelectInput,
@@ -37,6 +36,7 @@ export const PatientList = (props) => {
             title={patient.patientsTitle}
             actions={<PatientListActions/>}
             pagination={false}
+            bulkActionButtons={false}
         >
             <Datagrid>
                 <TextField sortable={false} label={patient.id} source="id" />
@@ -47,7 +47,6 @@ export const PatientList = (props) => {
                 <SelectField sortable={false} label={patient.appa} source="appa" choices={data.appa}/>
 
                 <EditButton sortable={false} label={patient.editButton} source="/patients" />
-                {/* <DeleteButton sortable={false} label={patient.deleteButton} source="/patients" /> */}
                 <ShowButton sortable={false} label={patient.showButton} source="/patients"/>
                 <FunctionField sortable={false} label={patient.visits} render={record => <Link to={{
                     pathname: "/visits",

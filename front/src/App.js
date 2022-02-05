@@ -6,11 +6,10 @@ import { VisitCreate, VisitList, VisitEdit, VisitShow } from './components/Visit
 import { QueueList, QueueCreate, QueueEdit, QueueShow } from "./components/Queue"
 import { CustomLayout } from "./components/CustomLayout";
 import dataProv from "./dataProv";
-
 import './App.css';
 
 function App() {
-  let HOST = process.env.REACT_APP_HOST
+  let HOST = process.env.REACT_APP_HOST || "localhost"
   let PORT = process.env.REACT_APP_PORT || 5000
   const url = `http://${HOST}:${PORT}`
   const provider = dataProv(url)

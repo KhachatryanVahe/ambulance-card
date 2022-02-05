@@ -13,7 +13,6 @@ import {
     DateField,
     SelectField,
     EditButton,
-    DeleteButton,
     ShowButton,
     SimpleShowLayout,
 } from "react-admin"
@@ -36,6 +35,7 @@ export const VisitList = (props) => {
             title={visit.visitsTitle}
             actions={<VisitsListActions/>}
             pagination={false}
+            bulkActionButtons={false}
         >
             <Datagrid>
                 <DateField sortable={false} label={visit.visitDate} source="visitDate"/>
@@ -46,7 +46,6 @@ export const VisitList = (props) => {
                 <SelectField sortable={false} label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateField sortable={false} label={visit.dischrgeDate} source="dischrgeDate"/>
                 <EditButton sortable={false} label={visit.editButton} source="/visits"/>
-                {/* <DeleteButton sortable={false} label={visit.deleteButton} source="/visits"/> */}
                 <ShowButton sortable={false} label={visit.showButton} source="/visits"/>
             </Datagrid>
         </List>

@@ -15,9 +15,8 @@
       "target": "nsis"
     },
     "linux": {
-      "target": "deb",
-      "category": "Utility",
-      "icon": "public/favicon.ico"
+      "target": ["deb"],
+      "category": "Utility"
     }
   },
   "scripts": {

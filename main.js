@@ -7,7 +7,7 @@ let mainWindow;
 function createWindow () {
 
   mainWindow = new BrowserWindow({
-    width: 1000,
+    width: 1600,
     height: 800,
     title:'Ambulance cards',
     webPreferences: {
@@ -15,7 +15,7 @@ function createWindow () {
     },
     icon: __dirname + '/public/favicon.ico'
   })
-  let HOST = process.env.HOST
+  let HOST = process.env.HOST || "localhost"
   let PORT = process.env.PORT || 5000
   mainWindow.loadURL(`http://${HOST}:${PORT}`)
   mainWindow.on('closed', function () {
