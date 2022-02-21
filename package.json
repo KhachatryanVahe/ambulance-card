@@ -12,16 +12,16 @@
       "output": "release"
     },
     "win": {
-      "target": "nsis"
+      "target": "portable"
     },
     "linux": {
       "target": ["deb"],
-      "category": "Utility"
+      "category": "Utility",
+      "icon": "public/favicon.png"
     }
   },
   "scripts": {
     "electron": "electron .",
-    "app:dir": "electron-builder --dir",
     "dist": "electron-builder",
     "dist:win": "electron-builder --win",
     "dist:linux": "electron-builder --linux",
