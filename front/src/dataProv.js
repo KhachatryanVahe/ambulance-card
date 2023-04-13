@@ -155,7 +155,7 @@ export default (function (apiUrl, httpClient, countHeader) {
                 return ({
                     data: responses.map(function (_a) {
                         var json = _a.json;
-                        return json.id;
+                        return json?.id;
                     })
                 });
             });
@@ -172,7 +172,7 @@ export default (function (apiUrl, httpClient, countHeader) {
             }).then(function (_a) {
                 var json = _a.json;
                 return ({
-                    data: __assign(__assign({}, params.data), { id: json.id }),
+                    data: __assign(__assign({}, params.data), { id: json?.id }),
                 });
             });
         },
@@ -200,7 +200,7 @@ export default (function (apiUrl, httpClient, countHeader) {
                 return ({
                     data: responses.map(function (_a) {
                         var json = _a.json;
-                        return json.id;
+                        return json?.id;
                     }),
                 });
             });

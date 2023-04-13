@@ -23,7 +23,7 @@
         "providedService" : "Մատուցաված ծառայություն",
         "saleKey" : "Վճարման կոդ",
         "paymentStatus" : "Վճարման կարգավիճակ",
-        "dischrgeDate" : "Դուրսգրման ամսաթիվ",
+        "dischargeDate" : "Դուրսգրման ամսաթիվ",
         "createButton" : "Ավելացնել այցելություն",
         "editButton" : "Փոփոխել",
         "deleteButton" : "Ջնջել",

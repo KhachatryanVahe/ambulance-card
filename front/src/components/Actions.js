@@ -15,7 +15,7 @@ export const PatientShowActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
             <EditButton basePath={basePath} record={data} label={translation.patient.editButton}/>
-            <CreateButton to={`/visits/create/${data.id}`} label={translation.visit.createButton}/>
+            <CreateButton to={`/visits/create/${data?.id}`} label={translation.visit.createButton}/>
         </TopToolbar>
     )
 };

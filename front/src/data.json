@@ -1,8 +1,8 @@
 {
     "departments" : [
-        {"id" : "birthplace", "name" : "Ծնարան"},
+        {"id" : "stomatology", "name" : "Ստոմատոլոգիա"},
         {"id" : "pathology", "name" : "Պաթոլոգիա"},
-        {"id" : "gynecology", "name" : "Գինեկոլոգիա"},
+        {"id" : "infection", "name" : "Ինֆեկցիոն"},
         {"id" : "diagnostic", "name" : "Ախտորոշիչ"},
         {"id" : "other", "name" : "Այլ"}
     ],

@@ -44,7 +44,7 @@ export const VisitList = (props) => {
                 <TextField sortable={false} label={visit.providedService} source="providedService"/>
                 <TextField sortable={false} label={visit.saleKey} source="saleKey"/>
                 <SelectField sortable={false} label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
-                <DateField sortable={false} label={visit.dischrgeDate} source="dischrgeDate"/>
+                <DateField sortable={false} label={visit.dischargeDate} source="dischargeDate"/>
                 <EditButton sortable={false} label={visit.editButton} source="/visits"/>
                 <ShowButton sortable={false} label={visit.showButton} source="/visits"/>
             </Datagrid>
@@ -63,7 +63,7 @@ export const VisitCreate = (props) => {
                 <TextInput label={visit.providedService} source="providedService"/>
                 <TextInput label={visit.saleKey} source="saleKey"/>
                 <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
-                <DateInput label={visit.dischrgeDate} source="dischrgeDate"/>
+                <DateInput label={visit.dischargeDate} source="dischargeDate"/>
             </SimpleForm>
         </Create>
     )
@@ -84,7 +84,7 @@ export const VisitEdit = (props) => {
                 <TextInput label={visit.providedService} source="providedService"/>
                 <TextInput label={visit.saleKey} source="saleKey"/>
                 <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
-                <DateInput label={visit.dischrgeDate} source="dischrgeDate"/>
+                <DateInput label={visit.dischargeDate} source="dischargeDate"/>
             </SimpleForm>
         </Edit>
     )
@@ -105,7 +105,7 @@ export const VisitShow = (props) => {
                 <TextField label={visit.providedService} source="providedService"/>
                 <TextField label={visit.saleKey} source="saleKey"/>
                 <SelectField label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
-                <DateField label={visit.dischrgeDate} source="dischrgeDate"/>
+                <DateField label={visit.dischargeDate} source="dischargeDate"/>
             </SimpleShowLayout>
         </Show>
     );

@@ -98,7 +98,7 @@ export const PatientEdit = (props) => {
 export const PatientShow = (props) => {
     var patient = translation.patient
     return(
-        <Show 
+        <Show
             title={patient.showTitle}
             actions={<PatientShowActions/>}
             {...props}

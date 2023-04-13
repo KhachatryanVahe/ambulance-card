@@ -1,4 +1,5 @@
 module.exports = (req, res, next) => {
-    res.header('Content-Range', 'page 0-20/20');
+    res.append('Access-Control-Expose-Headers', 'Content-Range');
+    res.append('Content-Range', 'page 0-20/20');
     next();
 }
