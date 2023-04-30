@@ -107,8 +107,8 @@ const addVisit = async (req, res) => {
   const visit = req.body;
   try {
     const { rows } = await pool.query(
-      'INSERT INTO visits("patientId", "visitDate", department, "doctorName", "providedService", "saleKey", "paymentStatus", "dischrgeDate") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *',
-      [visit.patientId, visit.visitDate, visit.department, visit.doctorName, visit.providedService, visit.saleKey, visit.paymentStatus, visit.dischargeDate]
+      'INSERT INTO visits("patientId", "visitDate", department, "doctorName", "providedService", "paymentKey", "paymentStatus", "dischrgeDate") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *',
+      [visit.patientId, visit.visitDate, visit.department, visit.doctorName, visit.providedService, visit.paymentKey, visit.paymentStatus, visit.dischargeDate]
     );
     res.send(rows[0]);
   } catch (err) {
@@ -153,8 +153,8 @@ const updateVisit = async (req, res) => {
   } else {
     try {
       const { rows } = await pool.query(
-        'UPDATE visits SET "patientId" = $1, "visitDate" = $2, department = $3, "doctorName" = $4, "providedService" = $5, "saleKey" = $6, "paymentStatus" = $7, "dischrgeDate" = $8 WHERE id = $9 RETURNING *',
-        [visit.patientId, visit.visitDate, visit.department, visit.doctorName, visit.providedService, visit.saleKey, visit.paymentStatus, visit.dischargeDate, id]
+        'UPDATE visits SET "patientId" = $1, "visitDate" = $2, department = $3, "doctorName" = $4, "providedService" = $5, "paymentKey" = $6, "paymentStatus" = $7, "dischrgeDate" = $8 WHERE id = $9 RETURNING *',
+        [visit.patientId, visit.visitDate, visit.department, visit.doctorName, visit.providedService, visit.paymentKey, visit.paymentStatus, visit.dischargeDate, id]
       );
       if (rows.length === 0) {
         res.status(404).send(`Visit with ID ${id} not found`);

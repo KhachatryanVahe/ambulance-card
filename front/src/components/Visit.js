@@ -42,7 +42,7 @@ export const VisitList = (props) => {
                 <SelectField sortable={false} label={visit.department} source="department" choices={data.departments}/>
                 <TextField sortable={false} label={visit.doctorName} source="doctorName"/>
                 <TextField sortable={false} label={visit.providedService} source="providedService"/>
-                <TextField sortable={false} label={visit.saleKey} source="saleKey"/>
+                <TextField sortable={false} label={visit.paymentKey} source="paymentKey"/>
                 <SelectField sortable={false} label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateField sortable={false} label={visit.dischargeDate} source="dischargeDate"/>
                 <EditButton sortable={false} label={visit.editButton} source="/visits"/>
@@ -61,7 +61,7 @@ export const VisitCreate = (props) => {
                 <SelectInput label={visit.department} source="department" choices={data.departments}/>
                 <TextInput label={visit.doctorName} source="doctorName"/>
                 <TextInput label={visit.providedService} source="providedService"/>
-                <TextInput label={visit.saleKey} source="saleKey"/>
+                <TextInput label={visit.paymentKey} source="paymentKey"/>
                 <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateInput label={visit.dischargeDate} source="dischargeDate"/>
             </SimpleForm>
@@ -82,7 +82,7 @@ export const VisitEdit = (props) => {
                 <SelectInput label={visit.department} source="department" choices={data.departments}/>
                 <TextInput label={visit.doctorName} source="doctorName"/>
                 <TextInput label={visit.providedService} source="providedService"/>
-                <TextInput label={visit.saleKey} source="saleKey"/>
+                <TextInput label={visit.paymentKey} source="paymentKey"/>
                 <SelectInput label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateInput label={visit.dischargeDate} source="dischargeDate"/>
             </SimpleForm>
@@ -103,7 +103,7 @@ export const VisitShow = (props) => {
                 <SelectField label={visit.department} source="department" choices={data.departments}/>
                 <TextField label={visit.doctorName} source="doctorName"/>
                 <TextField label={visit.providedService} source="providedService"/>
-                <TextField label={visit.saleKey} source="saleKey"/>
+                <TextField label={visit.paymentKey} source="paymentKey"/>
                 <SelectField label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateField label={visit.dischargeDate} source="dischargeDate"/>
             </SimpleShowLayout>

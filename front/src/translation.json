@@ -21,7 +21,7 @@
         "department" : "Բաժանմունք",
         "doctorName" : "Բժշկի անուն, ազգանուն",
         "providedService" : "Մատուցաված ծառայություն",
-        "saleKey" : "Վճարման կոդ",
+        "paymentKey" : "Վճարման կոդ",
         "paymentStatus" : "Վճարման կարգավիճակ",
         "dischargeDate" : "Դուրսգրման ամսաթիվ",
         "createButton" : "Ավելացնել այցելություն",

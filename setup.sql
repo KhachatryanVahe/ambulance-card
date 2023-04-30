@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS visits (
     patientId VARCHAR(100) REFERENCES patients(id),
     visitDate DATE,
     providedService VARCHAR,
-    saleKey VARCHAR,
+    paymentKey VARCHAR,
     paymentStatus VARCHAR,
     dischargeDate DATE
 );
@@ -35,17 +35,17 @@ CREATE TABLE IF NOT EXISTS doctors (
 );
 
 
-CREATE OR REPLACE PROCEDURE update_payment_status (sale_key VARCHAR)
+CREATE OR REPLACE PROCEDURE delete_queue_records (doctor_name VARCHAR)
 AS
 $$
 BEGIN
-    UPDATE visits
-    SET paymentStatus = 'paid'
-    WHERE saleKey = sale_key;
+    DELETE FROM queue
+    WHERE doctorName = doctor_name;
     COMMIT;
 END;
 $$
 LANGUAGE plpgsql;
+
 
 
 CREATE OR REPLACE FUNCTION get_patient_age (patient_id VARCHAR)
