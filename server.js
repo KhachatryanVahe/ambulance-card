@@ -19,7 +19,7 @@ const pool = new Pool({
 const login = async (req, res) => {
   const { username, password } = req.body;
   try {
-    const result = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+    const result = await pool.query('SELECT * FROM doctors WHERE username = $1', [username]);
 
     if (result.rows.length > 0) {
       const user = result.rows[0];
@@ -45,7 +45,7 @@ const signup = async (req, res) => {
 
   try {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
-    await pool.query('INSERT INTO users (name, username, password) VALUES ($1, $2, $3)', [name, username, hashedPassword]);
+    await pool.query('INSERT INTO doctors (name, username, password) VALUES ($1, $2, $3)', [name, username, hashedPassword]);
     res.status(201).json({ message: 'User created successfully' });
   } catch (error) {
     console.error('Error signing up:', error);
@@ -177,7 +177,6 @@ const getVisits = async (req, res) => {
       join doctors d on
         v.doctorId = d.id
     `);
-    console.log('rows', rows);
     res.send(rows);
   } catch (err) {
     console.error(err);

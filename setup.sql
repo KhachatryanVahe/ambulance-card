@@ -1,10 +1,3 @@
-CREATE TABLE IF NOT EXISTS users (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR(25),
-    usrname VARCHAR,
-    password VARCHAR
-);
-
 CREATE TABLE IF NOT EXISTS patients (
     id VARCHAR(100) PRIMARY KEY,
     name VARCHAR(100),
@@ -41,7 +34,9 @@ CREATE TABLE IF NOT EXISTS queue_dates (
 CREATE TABLE IF NOT EXISTS doctors (
     id SERIAL PRIMARY KEY,
     name VARCHAR,
-    department VARCHAR
+    department VARCHAR,
+    usrname VARCHAR,
+    password VARCHAR
 );
 
 
