@@ -41,8 +41,8 @@ export const QueueList = (props) => {
                 <DateField sortable={false} label={queue.date} showTime source="date" />
                 <TextField sortable={false} label={queue.doctorName} source="doctorName"/>
                 <SelectField sortable={false} label={queue.department} source="department" choices={data.departments}/>
-                <EditButton sortable={false} label={queue.editButton} source="/queue" />
-                <ShowButton sortable={false} label={queue.showButton} source="/queue"/>
+                <EditButton sortable={"false"} label={queue.editButton} source="/queue" />
+                <ShowButton sortable={"false"} label={queue.showButton} source="/queue"/>
             </Datagrid>
         </List>
     )

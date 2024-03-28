@@ -13,6 +13,8 @@ app.use(bodyparser.urlencoded({extended:false}))
 
 const PORT = process.env.PORT || 5000
 
+app.post('/login', db.login)
+app.post('/signup', db.signup)
 app.get('/patients', db.getPatients)
 app.get('/patients/:id', db.getPatientById)
 app.post('/patients', db.addPatient)

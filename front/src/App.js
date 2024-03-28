@@ -14,8 +14,47 @@ function App() {
   let PORT = process.env.REACT_APP_PORT || 5000
   const url = `http://${HOST}:${PORT}`
   const provider = dataProv(url)
+  const [authProvider, setAuthProvider] = React.useState(null);
+
+  const handleLogin = async (credentials) => {
+    try {
+      const response = await fetch(`${url}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(credentials),
+      });
+      if (response.ok) {
+        const { token } = await response.json();
+        localStorage.setItem('token', token);
+        return Promise.resolve();
+      } else {
+        throw new Error('Authentication failed');
+      }
+    } catch (error) {
+      console.error('Authentication error:', error);
+      return Promise.reject(error.message || 'Authentication error');
+    }
+  };
+
+  const handleLogout = async () => {
+    localStorage.removeItem('token');
+    return Promise.resolve();
+  };
+
+  if (!authProvider) {
+    setAuthProvider({
+      login: handleLogin,
+      logout: handleLogout,
+      checkError: () => Promise.resolve(),
+      checkAuth: () => localStorage.getItem('token') ? Promise.resolve() : Promise.reject(),
+      getPermissions: () => Promise.resolve(),
+    });
+  }
+
   return (
-    <Admin layout={CustomLayout} dataProvider={provider}>
+    <Admin layout={CustomLayout} authProvider={authProvider} dataProvider={provider}>
         <Resource
           name="patients"
           list={PatientList}

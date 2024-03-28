@@ -45,8 +45,8 @@ export const VisitList = (props) => {
                 <TextField sortable={false} label={visit.paymentKey} source="paymentKey"/>
                 <SelectField sortable={false} label={visit.paymentStatus} source="paymentStatus" choices={data.payment}/>
                 <DateField sortable={false} label={visit.dischargeDate} source="dischargeDate"/>
-                <EditButton sortable={false} label={visit.editButton} source="/visits"/>
-                <ShowButton sortable={false} label={visit.showButton} source="/visits"/>
+                <EditButton sortable={"false"} label={visit.editButton} source="/visits"/>
+                <ShowButton sortable={"false"} label={visit.showButton} source="/visits"/>
             </Datagrid>
         </List>
     )

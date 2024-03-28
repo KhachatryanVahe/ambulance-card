@@ -5,7 +5,7 @@ import translation from "../translation.json"
 export const PatientListActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <CreateButton basePath={basePath} label={translation.patient.createButton}/>
+            <CreateButton basepath={basePath} label={translation.patient.createButton}/>
             <ExportButton/>
         </TopToolbar>
     )
@@ -14,7 +14,7 @@ export const PatientListActions = ({ basePath, data, resource }) => {
 export const PatientShowActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <EditButton basePath={basePath} record={data} label={translation.patient.editButton}/>
+            <EditButton basepath={basePath} record={data} label={translation.patient.editButton}/>
             <CreateButton to={`/visits/create/${data?.id}`} label={translation.visit.createButton}/>
         </TopToolbar>
     )
@@ -23,7 +23,7 @@ export const PatientShowActions = ({ basePath, data, resource }) => {
 export const PatientEditActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <ShowButton basePath={basePath} record={data} label={translation.patient.showButton}/>
+            <ShowButton basepath={basePath} record={data} label={translation.patient.showButton}/>
         </TopToolbar>
     )
 };
@@ -40,7 +40,7 @@ export const VisitsListActions = ({ basePath, data, resource }) => {
 export const VisitShowActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <EditButton basePath={basePath} record={data} label={translation.visit.editButton}/>
+            <EditButton basepath={basePath} record={data} label={translation.visit.editButton}/>
         </TopToolbar>
     )
 };
@@ -48,7 +48,7 @@ export const VisitShowActions = ({ basePath, data, resource }) => {
 export const VisitEditActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <ShowButton basePath={basePath} record={data} label={translation.visit.showButton}/>
+            <ShowButton basepath={basePath} record={data} label={translation.visit.showButton}/>
         </TopToolbar>
     )
 };
@@ -56,7 +56,7 @@ export const VisitEditActions = ({ basePath, data, resource }) => {
 export const QueueListActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <CreateButton basePath={basePath} label={translation.queue.createButton}/>
+            <CreateButton basepath={basePath} label={translation.queue.createButton}/>
         </TopToolbar>
     )
 };
@@ -64,7 +64,7 @@ export const QueueListActions = ({ basePath, data, resource }) => {
 export const QueueShowActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <EditButton basePath={basePath} record={data} label={translation.queue.editButton}/>
+            <EditButton basepath={basePath} record={data} label={translation.queue.editButton}/>
         </TopToolbar>
     )
 };
@@ -72,7 +72,7 @@ export const QueueShowActions = ({ basePath, data, resource }) => {
 export const QueueEditActions = ({ basePath, data, resource }) => {
     return(
         <TopToolbar>
-            <ShowButton basePath={basePath} record={data} label={translation.queue.showButton}/>
+            <ShowButton basepath={basePath} record={data} label={translation.queue.showButton}/>
         </TopToolbar>
     )
 };

@@ -46,8 +46,8 @@ export const PatientList = (props) => {
                 <TextField sortable={false} label={patient.address} source="address" />
                 <SelectField sortable={false} label={patient.appa} source="appa" choices={data.appa}/>
 
-                <EditButton sortable={false} label={patient.editButton} source="/patients" />
-                <ShowButton sortable={false} label={patient.showButton} source="/patients"/>
+                <EditButton sortable={"false"} label={patient.editButton} source="/patients" />
+                <ShowButton sortable={"false"} label={patient.showButton} source="/patients"/>
                 <FunctionField sortable={false} label={patient.visits} render={record => <Link to={{
                     pathname: "/visits",
                     search: `?filter=${JSON.stringify({ patientId: record.id })}`,
@@ -109,7 +109,7 @@ export const PatientShow = (props) => {
                 <TextField label={patient.phone} source="phone"/>
                 <DateField label={patient.birthDate} source="birthDate"/>
                 <TextField label={patient.address} source="address"/>
-                <SelectField sortable={false} label={patient.appa} source="appa" choices={data.appa}/>
+                <SelectField sortable={"false"} label={patient.appa} source="appa" choices={data.appa}/>
             </SimpleShowLayout>
         </Show>
     );
